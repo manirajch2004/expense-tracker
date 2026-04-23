@@ -233,6 +233,8 @@ def edit_expense(expense_id):
 
     return render_template('edit.html', expense=expense)
 
+# This runs init_db when app starts on Render too
+init_db()
+
 if __name__ == '__main__':
-    init_db()
     app.run(debug=True)
